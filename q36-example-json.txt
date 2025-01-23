@@ -1,0 +1,85 @@
+{
+  "report": [
+    {
+      "cloud_provider": "AWS",
+      "alert": {
+        "id": "orca-2098481",
+        "type": "Critical Remote Code Execution Vulnerability (CVE-2024-38063)",
+        "risk_level": "critical",
+        "created_at": "2024-08-19T10:02:49+00:00",
+        "last_seen": "2025-01-22T11:19:12+00:00",
+        "hostname": "METASPLOITABLE3",
+        "orca_score": 9.0
+      },
+      "cloud_account": {
+        "id": "506464807365",
+        "name": "acme-production (506464807365)",
+        "tags": {
+          "Name": "OrcaDemoNameTag",
+          "application:network": "external"
+        }
+      },
+      "asset": {
+        "type": "AwsEc2Instance",
+        "name": "Windows Server 2008 R2",
+        "region": "us-east-1",
+        "exposure": "public_facing",
+        "console_url": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#InstanceDetails:instanceId=i-06b41ca1b62ed0594"
+      }
+    },
+    {
+      "cloud_provider": "Azure",
+      "alert": {
+        "id": "orca-1740849",
+        "type": "PrintNightmare Remote Code Execution Vulnerability (CVE-2021-34527)",
+        "risk_level": "critical",
+        "created_at": "2024-05-05T09:57:16+00:00",
+        "last_seen": "2025-01-22T11:16:28+00:00",
+        "hostname": "EC2AMAZ-4AKAHOD",
+        "orca_score": 9.3
+      },
+      "cloud_account": {
+        "id": "xyz-azure-account",
+        "name": "Azure-Production",
+        "tags": {
+          "Environment": "Production",
+          "Application": "WebApp"
+        }
+      },
+      "asset": {
+        "type": "AzureVirtualMachine",
+        "name": "Windows Server 2016",
+        "region": "eastus",
+        "exposure": "internal",
+        "console_url": "https://portal.azure.com/#@microsoft.com/resource/subscriptions/xyz/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1"
+      }
+    },
+    {
+      "cloud_provider": "GCP",
+      "alert": {
+        "id": "orca-3198472",
+        "type": "Sensitive Data Exposure Detected",
+        "risk_level": "high",
+        "created_at": "2024-06-15T08:45:32+00:00",
+        "last_seen": "2025-01-21T12:34:56+00:00",
+        "hostname": "GCP-Instance",
+        "orca_score": 8.7
+      },
+      "cloud_account": {
+        "id": "123456789012",
+        "name": "gcp-prod-environment",
+        "tags": {
+          "Team": "Analytics",
+          "Project": "BigDataPipeline"
+        }
+      },
+      "asset": {
+        "type": "GcpComputeInstance",
+        "name": "Data Processing VM",
+        "region": "us-central1",
+        "exposure": "public_facing",
+        "console_url": "https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/vm-instance-1"
+      }
+    }
+  ]
+}
